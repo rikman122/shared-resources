@@ -30,6 +30,11 @@ alias dcstart='dcrun start ' # usage: dcstart container_name
 alias dcpull='dcrun pull' # usage: dcpull to pull all new images or dcpull container_name
 alias traefiklogs='tail -f $HOME/docker/logs/traefik/traefik.log' # tail traefik logs
 
+# NEXTCLOUD
+alias ncconfig='sudo docker run -it --rm --volume nextcloud_aio_nextcloud:/var/www/html:rw alpine sh -c "apk add --no-cache nano && nano /var/www/html/config/config.php"'
+alias ncocc='sudo docker exec --user www-data -it nextcloud-aio-nextcloud php occ'
+alias ncscan='ncocc files:scan --all'
+
 # CROWDSEC
 alias cscli='dcrun exec -t crowdsec cscli'
 alias csdecisions='cscli decisions list'
