@@ -85,7 +85,7 @@ alias usage10='du -hsx * | sort -rh | head -10' # Gives you what is using the mo
 alias baupdate='. ~/.bashrc'
 alias baedit='nano $HOME/.bash_aliases'
 alias bacopy='sudo cp $HOME/.bash_aliases* /root/'
-alias baget='curl -s https://github.com/rikman122/knowledge-base/blob/f30f5e6a57b5c6f6122f0a3857052a35ec8df9ae/bash_aliases -o /$HOME/.bash_aliases >/dev/null 2>&1'
+alias baget='curl -s https://raw.githubusercontent.com/rikman122/shared-resources/refs/heads/main/.bash_aliases -o /$HOME/.bash_aliases >/dev/null 2>&1'
 
 # SYSTEMD START, STOP AND RESTART
 alias ctlreload='sudo systemctl daemon-reload'
