@@ -1,4 +1,4 @@
-alias dcrun='sudo docker compose --profile all -f $HOME/docker/docker-compose-$HOSTNAME.yml'
+alias dcrun='sudo docker compose --profile all -f $HOME/docker/docker-compose.yml'
 
 # DOCKER - All Docker commands start with "d" AND Docker Compose commands start with "dc"
 alias dstop='sudo docker stop $(sudo docker ps -a -q)' # usage: dstop container_name
