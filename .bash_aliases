@@ -90,9 +90,7 @@ alias partusage='df -hlT --exclude-type=tmpfs --exclude-type=devtmpfs' # Shows t
 alias usage10='du -hsx * | sort -rh | head -10' # Gives you what is using the most space. Both directories and files. Varies on current directory
 
 # BASH ALIASES
-alias baupdate='. ~/.bashrc'
-alias baedit='nano $HOME/.bash_aliases'
-alias bacopy='sudo cp $HOME/.bash_aliases* /root/'
+alias baupdate='curl -s https://raw.githubusercontent.com/rikman122/shared-resources/refs/heads/main/.bash_aliases -o /$HOME/.bash_aliases >/dev/null 2>&1 && . ~/.bashrc'
 alias baget='curl -s https://raw.githubusercontent.com/rikman122/shared-resources/refs/heads/main/.bash_aliases -o /$HOME/.bash_aliases >/dev/null 2>&1'
 
 # SYSTEMD START, STOP AND RESTART
