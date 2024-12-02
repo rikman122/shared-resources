@@ -31,9 +31,11 @@ alias dcpull='dcrun pull' # usage: dcpull to pull all new images or dcpull conta
 alias traefiklogs='tail -f $HOME/docker/logs/traefik/traefik.log' # tail traefik logs
 
 #FRIGATE
-alias frigatereset='dcdown && sudo cp frigatebackupconfig && sudo rm $HOME/docker/appdata/frigate/* && frigaterestoreconfig && sudo rm -r /shared/clips/ && dcup'
+alias frigatereset='dcdown && frigatebackupconfig && frigatedeldata && frigaterestoreconfig && frigatedelclips && dcup'
 alias frigatebackupconfig='sudo cp $HOME/docker/appdata/frigate/config.yaml $HOME/docker/config.yaml'
 alias frigaterestoreconfig='sudo cp $HOME/docker/config.yaml $HOME/docker/appdata/frigate/config.yaml'
+alias frigatedelclips='sudo rm -r /shared/clips/'
+alias frigatedeldata='sudo rm $HOME/docker/appdata/frigate/*'
 
 # NEXTCLOUD
 alias ncconfig='sudo docker run -it --rm --volume nextcloud_aio_nextcloud:/var/www/html:rw alpine sh -c "apk add --no-cache nano && nano /var/www/html/config/config.php"'
